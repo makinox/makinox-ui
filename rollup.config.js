@@ -6,7 +6,7 @@ import typescript from 'rollup-plugin-typescript2';
 import packageJson from './package.json';
 
 const config = {
-  input: './src/index.tsx',
+  input: './src/components/index.tsx',
   output: [
     {
       file: packageJson.main,
