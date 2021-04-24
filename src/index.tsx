@@ -1,2 +1,2 @@
 import './layout/flex.css';
-export { HelloWorld, FluidContainer, TopBar } from './components';
+export { HelloWorld, FluidContainer, TopBar, Button } from './components';
