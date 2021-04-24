@@ -20,11 +20,11 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@4.1.0
         with:
           branch: gh-pages
-          folder: dist
+          folder: storybook-static
 
       - name: build npm package
         run: |
-          yarn build-storybook
+          yarn build
           rm -rf dist/stories
 
       - name: publish npm package
