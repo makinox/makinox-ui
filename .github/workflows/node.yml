@@ -29,4 +29,6 @@ jobs:
 
       - name: publish npm package
         if: contains(github.ref, 'main')
-        run: npm publish
+        uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_KEY }}
