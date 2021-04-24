@@ -1,18 +1,17 @@
-import React from 'react';
-
 import { HelloWorld } from '../../components';
+import { HelloWorldType } from '../../components/HelloWorld/HelloWorld';
 
 export default {
   title: 'Example/HelloWorld',
   component: HelloWorld,
 };
 
-const Template = (args) => <HelloWorld {...args} />;
+const Template = (args: JSX.IntrinsicAttributes & { message: string }) => <HelloWorld {...args} />;
 
-export const WithMessage = Template.bind({});
+export const WithMessage: { args: HelloWorldType } | any = Template.bind({});
 WithMessage.args = {
   message: 'Hola mundo',
 };
 
-export const WithoutMessage = Template.bind({});
+export const WithoutMessage: { args: HelloWorldType } | any = Template.bind({});
 WithoutMessage.args = {};
