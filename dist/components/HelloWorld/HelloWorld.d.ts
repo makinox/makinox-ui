@@ -1,5 +1,6 @@
 /// <reference types="react" />
-declare function HelloWorld({ message }: {
-    message: string;
-}): JSX.Element;
+export declare type HelloWorldType = {
+    message?: string;
+};
+declare function HelloWorld({ message }: HelloWorldType): JSX.Element;
 export default HelloWorld;
