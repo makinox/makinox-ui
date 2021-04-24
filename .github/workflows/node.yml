@@ -1,0 +1,32 @@
+name: Build and Deploy
+on:
+  push:
+  pull_request:
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.3.1
+
+      - name: Install
+        run: yarn install
+
+      - name: build storybook
+        run: yarn build-storybook
+
+      - name: Deploy 🚀
+        if: contains(github.ref, 'main')
+        uses: JamesIves/github-pages-deploy-action@4.1.0
+        with:
+          branch: gh-pages
+          folder: dist
+
+      - name: build npm package
+        run: |
+          yarn build-storybook
+          rm -rf dist/stories
+
+      - name: publish npm package
+        if: contains(github.ref, 'main')
+        run: npm publish
