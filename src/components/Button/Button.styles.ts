@@ -26,8 +26,11 @@ const buttonBase = css`
   height: 36px;
   transition: all 0.3s ease 0s;
 
+  &:focus,
   &:active {
     outline: none;
+  }
+  &:active {
     transform: scale(1.01);
   }
 `;
