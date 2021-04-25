@@ -6,4 +6,4 @@ import './layout/justify.css';
 import './layout/justifyItems.css';
 import './layout/wrap.css';
 import './layout/scale.css';
-export { FluidContainer, TopBar, Button, Float } from './components';
+export { FluidContainer, TopBar, Button, Float, Card } from './components';
