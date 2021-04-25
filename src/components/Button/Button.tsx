@@ -1,4 +1,3 @@
-import React from 'react';
 import { ButtonContained, ButtonOutline, ButtonText } from './Button.styles';
 import { ButtonType } from './Button.types';
 
