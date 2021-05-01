@@ -1,19 +1,18 @@
-import { FluidContainer } from '../../';
+import { Story } from '@storybook/react/types-6-0';
 import { FluidContainerType } from '../../types';
+import { FluidContainer } from '../../';
 
 export default {
   title: 'Example/FluidContainer',
   component: FluidContainer,
 };
 
-const Template = (args: JSX.IntrinsicAttributes & FluidContainerType) => <FluidContainer {...args} />;
-
-export const WithChild: { args: FluidContainerType } | any = Template.bind({});
+export const WithChild: Story<FluidContainerType> = (props: FluidContainerType) => <FluidContainer {...props} />;
 WithChild.args = {
   children: <span>hola children</span>,
 };
 
-export const WithoutChild: { args: FluidContainerType } | any = Template.bind({});
+export const WithoutChild: Story<FluidContainerType> = (props: FluidContainerType) => <FluidContainer {...props} />;
 WithoutChild.args = {
   children: <></>,
 };

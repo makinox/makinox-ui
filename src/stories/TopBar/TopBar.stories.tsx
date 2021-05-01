@@ -1,13 +1,15 @@
-import { TopBar } from '../../';
+import { Story } from '@storybook/react/types-6-0';
 import { TopBarType } from '../../types';
+import { TopBar } from '../../';
 
 export default {
   title: 'Example/TopBar',
   component: TopBar,
 };
 
-const Template = (args: JSX.IntrinsicAttributes & TopBarType) => (
-  <TopBar {...args} leftChild={<span>leftChild</span>} centerChild={<span>centerChild</span>} rightChild={<span>rightChild</span>} />
-);
-
-export const WithChild = Template.bind({});
+export const WithChild: Story<TopBarType> = (props: TopBarType) => <TopBar {...props} />;
+WithChild.args = {
+  leftChild: <span>leftChild</span>,
+  centerChild: <span>centerChild</span>,
+  rightChild: <span>rightChild</span>,
+};

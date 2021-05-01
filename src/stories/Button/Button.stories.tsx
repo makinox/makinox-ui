@@ -1,4 +1,4 @@
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Story } from '@storybook/react/types-6-0';
 import { GiCastle } from 'react-icons/gi';
 import { ButtonType } from '../../types';
 import { Button } from '../..';
@@ -6,7 +6,7 @@ import { Button } from '../..';
 export default {
   title: 'Example/Button',
   component: Button,
-} as Meta<ButtonType>;
+};
 
 export const Contained: Story<ButtonType> = (props: ButtonType) => <Button {...props} />;
 Contained.args = {
