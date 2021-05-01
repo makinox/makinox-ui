@@ -1,6 +1,6 @@
-import { Card, Button } from '../..';
+import { Meta, Story } from '@storybook/react/types-6-0';
 import { CardType } from '../../types';
-import type { Story, Meta } from '../helpers/storyTypes';
+import { Card, Button } from '../..';
 
 export default {
   title: 'Example/Card',

@@ -1,19 +1,21 @@
-import { Float } from '../..';
+import { Story } from '@storybook/react/types-6-0';
+import { GiSwordAltar } from 'react-icons/gi';
 import { FloatType } from '../../types';
+import { Float } from '../..';
 
 export default {
   title: 'Example/Float',
   component: Float,
 };
 
-const TemplateIcon = (args: JSX.IntrinsicAttributes & FloatType) => <Float {...args} icon={<span>🙂</span>} />;
-
-export const DefaultIcon: { args: FloatType } | any = TemplateIcon.bind({});
+export const DefaultIcon: Story<FloatType> = (props: FloatType) => <Float {...props} />;
 DefaultIcon.args = {
   use: 'Default',
+  icon: <GiSwordAltar size={25} />,
 };
 
-export const MiniIcon: { args: FloatType } | any = TemplateIcon.bind({});
+export const MiniIcon: Story<FloatType> = (props: FloatType) => <Float {...props} />;
 MiniIcon.args = {
   use: 'Mini',
+  icon: <GiSwordAltar size={20} />,
 };
