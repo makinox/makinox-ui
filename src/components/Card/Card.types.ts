@@ -6,6 +6,12 @@ export interface CardType extends HTMLAttributes<HTMLElement> {
   secondary?: string;
   text?: string;
   media?: string;
+  maxWidth?: string;
   buttons?: [HTMLButtonElement, HTMLButtonElement];
   children?: React.ReactNode;
+}
+
+export interface CardStyle {
+  media?: string;
+  maxWidth?: string;
 }

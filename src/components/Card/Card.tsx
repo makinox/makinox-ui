@@ -1,11 +1,12 @@
 import { CardElevated, CardOutlined } from './Card.styles';
 import { CardType } from './Card.types';
 
-function Card({ title, secondary, text, buttons, children, use, ...props }: CardType) {
+function Card({ title, secondary, text, buttons, children, media, use, maxWidth = '330px', ...props }: CardType) {
   const Child = children ? (
     children
   ) : (
     <>
+      {media ? <div className="card-media" /> : <></>}
       {title || secondary ? (
         <div className="card-header">
           {title ? <h6 className="headline6">{title}</h6> : <></>}
@@ -27,11 +28,23 @@ function Card({ title, secondary, text, buttons, children, use, ...props }: Card
 
   switch (use) {
     case 'elevated':
-      return <CardElevated {...props}>{Child}</CardElevated>;
+      return (
+        <CardElevated maxWidth={maxWidth} media={media} {...props}>
+          {Child}
+        </CardElevated>
+      );
     case 'outlined':
-      return <CardOutlined {...props}>{Child}</CardOutlined>;
+      return (
+        <CardOutlined maxWidth={maxWidth} media={media} {...props}>
+          {Child}
+        </CardOutlined>
+      );
     default:
-      return <CardElevated {...props}>{Child}</CardElevated>;
+      return (
+        <CardElevated maxWidth={maxWidth} media={media} {...props}>
+          {Child}
+        </CardElevated>
+      );
   }
 }
 
