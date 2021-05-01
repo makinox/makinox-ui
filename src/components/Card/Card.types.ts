@@ -1,4 +1,5 @@
 import { HTMLAttributes } from 'react';
+import { ButtonType } from '../Button/Button.types';
 
 export interface CardType extends HTMLAttributes<HTMLElement> {
   use: 'elevated' | 'outlined';
@@ -7,7 +8,7 @@ export interface CardType extends HTMLAttributes<HTMLElement> {
   text?: string;
   media?: string;
   maxWidth?: string;
-  buttons?: [HTMLButtonElement, HTMLButtonElement];
+  buttons?: [HTMLButtonElement | ButtonType | Element | any, HTMLButtonElement | ButtonType | Element | any];
   children?: React.ReactNode;
 }
 
