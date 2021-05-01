@@ -3,7 +3,7 @@ import { CardType } from '../../types';
 import { Card, Button } from '../..';
 
 export default {
-  title: 'Example/Card',
+  title: 'Makinox-ui/Card',
   component: Card,
 };
 

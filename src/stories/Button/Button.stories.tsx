@@ -4,7 +4,7 @@ import { ButtonType } from '../../types';
 import { Button } from '../..';
 
 export default {
-  title: 'Example/Button',
+  title: 'Makinox-ui/Button',
   component: Button,
 };
 

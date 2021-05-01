@@ -3,7 +3,7 @@ import { FluidContainerType } from '../../types';
 import { FluidContainer } from '../../';
 
 export default {
-  title: 'Example/FluidContainer',
+  title: 'Makinox-ui/FluidContainer',
   component: FluidContainer,
 };
 

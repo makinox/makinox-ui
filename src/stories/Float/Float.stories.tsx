@@ -4,7 +4,7 @@ import { FloatType } from '../../types';
 import { Float } from '../..';
 
 export default {
-  title: 'Example/Float',
+  title: 'Makinox-ui/Float',
   component: Float,
 };
 

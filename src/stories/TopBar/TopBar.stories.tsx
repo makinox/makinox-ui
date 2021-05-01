@@ -3,7 +3,7 @@ import { TopBarType } from '../../types';
 import { TopBar } from '../../';
 
 export default {
-  title: 'Example/TopBar',
+  title: 'Makinox-ui/TopBar',
   component: TopBar,
 };
 
