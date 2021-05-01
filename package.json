@@ -65,6 +65,7 @@
     "@storybook/preset-create-react-app": "^3.1.7",
     "@storybook/react": "^6.2.9",
     "@types/styled-components": "^5.1.9",
+    "react-icons": "^4.2.0",
     "rollup": "2.30",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-typescript2": "^0.30.0",

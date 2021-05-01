@@ -1,5 +1,6 @@
 import { Button } from '../..';
 import { ButtonType } from '../../types';
+import { GiCastle } from 'react-icons/gi';
 
 export default {
   title: 'Example/Button',
@@ -26,7 +27,16 @@ Text.args = {
   message: 'text',
 };
 
-const TemplateIcon = (args: JSX.IntrinsicAttributes & ButtonType) => <Button {...args} icon={<span style={{ marginRight: '8px' }}>🙂</span>} />;
+const TemplateIcon = (args: JSX.IntrinsicAttributes & ButtonType) => (
+  <Button
+    {...args}
+    icon={
+      <span style={{ marginRight: '8px' }}>
+        <GiCastle />
+      </span>
+    }
+  />
+);
 
 export const ContainedIcon: { args: ButtonType } | any = TemplateIcon.bind({});
 ContainedIcon.args = {
