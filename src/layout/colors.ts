@@ -27,36 +27,36 @@ export const lightBackground: color = {
 };
 export const lightSurface: color = {
   name: '--light-surface',
-  style: 'var(light-surface, #FFFFFF)',
+  style: 'var(--light-surface, #FFFFFF)',
   value: '#FFFFFF',
 };
 export const lightError: color = {
   name: '--light-error',
-  style: 'var(light-error, #B00020)',
+  style: 'var(--light-error, #B00020)',
   value: '#B00020',
 };
 export const lightOnPrimary: color = {
   name: '--light-onPrimary',
-  style: 'var(light-onPrimary, #FFFFFF)',
+  style: 'var(--light-onPrimary, #FFFFFF)',
   value: '#FFFFFF',
 };
 export const lightOnSecondary: color = {
   name: '--light-onSecondary',
-  style: 'var(light-onSecondary, #000000)',
+  style: 'var(--light-onSecondary, #000000)',
   value: '#000000',
 };
 export const lightOnBackground: color = {
   name: '--light-onBackground',
-  style: 'var(light-onBackground, #000000)',
+  style: 'var(--light-onBackground, #000000)',
   value: '#000000',
 };
 export const lightOnSurface: color = {
   name: '--light-onSurface',
-  style: 'var(light-onSurface, #000000)',
+  style: 'var(--light-onSurface, #000000)',
   value: '#000000',
 };
 export const lightOnError: color = {
   name: '--light-onError',
-  style: 'var(light-onError, #FFFFFF)',
+  style: 'var(--light-onError, #FFFFFF)',
   value: '#FFFFFF',
 };

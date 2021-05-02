@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components';
-import { lightOnPrimary, lightPrimary } from '../../layout/colors';
 
 const buttonBase = css`
   cursor: pointer;
@@ -38,11 +37,11 @@ const buttonBase = css`
 export const ButtonContained = styled.button`
   ${buttonBase}
 
-  background-color: ${lightPrimary.value};
-  color: ${lightOnPrimary.value};
+  background-color: rgb(var(--light-primary));
+  color: rgb(var(--light-onPrimary));
 
   &:hover {
-    background-color: ${lightPrimary.value + 'E6'};
+    background-color: ${'rgba(var(--light-primary), 0.8)'};
   }
 `;
 
@@ -50,11 +49,11 @@ export const ButtonOutline = styled.button`
   ${buttonBase}
 
   background-color: transparent;
-  border: 1px solid ${lightPrimary.value};
-  color: ${lightPrimary.value};
+  border: 1px solid rgb(var(--light-primary));
+  color: rgb(var(--light-primary));
 
   &:hover {
-    background-color: ${lightPrimary.value + '1A'};
+    background-color: ${'rgba(var(--light-primary), 0.08)'};
   }
 `;
 
@@ -62,9 +61,9 @@ export const ButtonText = styled.button`
   ${buttonBase}
 
   background-color: transparent;
-  color: ${lightPrimary.value};
+  color: rgb(var(--light-primary));
 
   &:hover {
-    background-color: ${lightPrimary.value + '1A'};
+    background-color: ${'rgba(var(--light-primary), 0.08)'};
   }
 `;
