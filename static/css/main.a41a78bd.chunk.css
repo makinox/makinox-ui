@@ -1,3 +1,18 @@
+:root {
+  --light-primary: 98, 0, 238;
+  --light-primary-variant: 55, 0, 179;
+  --light-secondary: 3, 218, 198;
+  --light-secondary-variant: 1, 135, 134;
+  --light-background: 255, 255, 255;
+  --light-surface: 255, 255, 255;
+  --light-error: 176, 0, 32;
+  --light-onPrimary: 255, 255, 255;
+  --light-onSecondary: 0, 0, 0;
+  --light-onBackground: 0, 0, 0;
+  --light-onSurface: 0, 0, 0;
+  --light-onError: 255, 255, 255;
+}
+
 .content-center {
   -webkit-align-content: center;
           align-content: center;
@@ -268,4 +283,4 @@
 }
 
 
-/*# sourceMappingURL=main.b9e75ed8.chunk.css.map*/
+/*# sourceMappingURL=main.a41a78bd.chunk.css.map*/
