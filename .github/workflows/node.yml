@@ -26,8 +26,6 @@ jobs:
         run: |
           yarn build
           rm -rf dist/stories
-          rm dist/colors
-
       - name: publish npm package
         if: contains(github.ref, 'main')
         uses: JS-DevTools/npm-publish@v1
