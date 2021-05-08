@@ -1,4 +1,4 @@
-import { FluidContainer } from '..';
+import FluidContainer from '../FluidContainer/FluidContainer';
 import { TopBarNav } from './TopBar.styles';
 import { TopBarType } from './TopBar.types';
 

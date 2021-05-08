@@ -1,12 +1,13 @@
-import commonjs from '@rollup/plugin-commonjs';
-import resolve from '@rollup/plugin-node-resolve';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import typescript from 'rollup-plugin-typescript2';
+import resolve from '@rollup/plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
+import css from 'rollup-plugin-scss';
 
 import packageJson from './package.json';
 
 const config = {
-  input: './src/components/index.tsx',
+  input: './src/index.tsx',
   output: [
     {
       file: packageJson.main,
@@ -19,7 +20,7 @@ const config = {
       sourcemap: true,
     },
   ],
-  plugins: [peerDepsExternal(), resolve(), commonjs(), typescript()],
+  plugins: [peerDepsExternal(), resolve(), commonjs(), typescript(), css({ outputStyle: 'compressed' })],
 };
 
 export default config;
