@@ -1,11 +1,12 @@
 import { CardElevated, CardOutlined } from './Card.styles';
 import { CardType } from './Card.types';
 
-function Card({ title, secondary, text, buttons, children, media, use, maxWidth = '330px', ...props }: CardType) {
+function Card({ title, secondary, text, buttons, children, media, customMedia, use, maxWidth = '330px', ...props }: CardType) {
   const Child = children ? (
     children
   ) : (
     <>
+      {customMedia ? <div className="card-customMedia">{customMedia}</div> : <></>}
       {media ? <div className="card-media" /> : <></>}
       {title || secondary ? (
         <div className="card-header">
