@@ -38,6 +38,22 @@
           align-content: space-evenly;
 }
 
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
 .flex-row {
   -webkit-flex-direction: row;
           flex-direction: row;
@@ -283,4 +299,4 @@
 }
 
 
-/*# sourceMappingURL=main.a41a78bd.chunk.css.map*/
+/*# sourceMappingURL=main.b8b33c8f.chunk.css.map*/
