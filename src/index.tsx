@@ -1,4 +1,5 @@
 import './layout/content.css';
+import './layout/text.css';
 import './layout/direction.css';
 import './layout/display.css';
 import './layout/items.css';
