@@ -56,6 +56,7 @@ export const CardElevated = styled.article<CardStyle>`
 `;
 
 export const CardOutlined = styled.article<CardStyle>`
+  border-radius: 4px;
   box-shadow: rgb(0 0 0 / 20%) 0px 0px 0px 0px, rgb(0 0 0 / 14%) 0px 0px 0px 0px, rgb(0 0 0 / 12%) 0px 0px 0px 0px;
   background-color: ${lightBackground.value};
   border-width: 1px;
