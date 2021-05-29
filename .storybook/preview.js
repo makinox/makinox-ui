@@ -21,7 +21,7 @@ export const parameters = {
       },
       {
         name: 'dark',
-        value: '#333333',
+        value: '#121212',
       },
     ],
   },

@@ -1,4 +1,5 @@
 import { Story } from '@storybook/react/types-6-0';
+import { ThemeProvider } from 'styled-components';
 import { CardType } from '../../types';
 import { Card, Button } from '../..';
 
@@ -43,4 +44,50 @@ Media.args = {
   text: 'text',
   buttons: [<Button key="Action uno" message="Action uno" use="text" />, <Button key="Action dos" message="Action dos" use="text" />],
   media: previewDefault,
+};
+
+export const DarkElevated: Story<CardType> = (props: CardType) => (
+  <ThemeProvider theme={{ isDark: true }}>
+    <Card {...props} />
+  </ThemeProvider>
+);
+DarkElevated.args = {
+  use: 'elevated',
+  title: 'title',
+  secondary: 'secondary',
+  text: 'text',
+};
+DarkElevated.parameters = {
+  backgrounds: { default: 'dark' },
+};
+
+export const DarkOutlined: Story<CardType> = (props: CardType) => (
+  <ThemeProvider theme={{ isDark: true }}>
+    <Card {...props} />
+  </ThemeProvider>
+);
+DarkOutlined.args = {
+  use: 'outlined',
+  title: 'title',
+  secondary: 'secondary',
+  text: 'text',
+};
+DarkOutlined.parameters = {
+  backgrounds: { default: 'dark' },
+};
+
+export const DarkWithButtons: Story<CardType> = (props: CardType) => (
+  <ThemeProvider theme={{ isDark: true }}>
+    <Card {...props} />
+  </ThemeProvider>
+);
+DarkWithButtons.args = {
+  use: 'outlined',
+  title: 'title',
+  secondary: 'secondary',
+  text: 'text',
+  buttons: [<Button key="Action uno" message="Action uno" use="text" />, <Button key="Action dos" message="Action dos" use="text" />],
+};
+DarkWithButtons.parameters = {
+  backgrounds: { default: 'dark' },
 };

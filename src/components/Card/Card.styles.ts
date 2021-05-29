@@ -46,11 +46,24 @@ const CardBase = (props: CardStyle) => css`
 
 export const CardElevated = styled.article<CardStyle>`
   border-radius: 4px;
-  background-color: ${lightBackground.value};
   box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px, rgb(0 0 0 / 14%) 0px 1px 1px 0px, rgb(0 0 0 / 12%) 0px 1px 3px 0px;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+
+  ${(props) => {
+    if (props.theme?.isDark) {
+      return `
+        background-color: rgb(var(--dark-background));
+        color: rgb(var(--dark-onBackground));
+      `;
+    } else {
+      return `
+        background-color: rgb(var(--light-background));
+        color: rgb(var(--light-onBackground));
+      `;
+    }
+  }}
 
   ${(props) => CardBase({ media: props.media, maxWidth: props.maxWidth })}
 `;
@@ -61,7 +74,22 @@ export const CardOutlined = styled.article<CardStyle>`
   background-color: ${lightBackground.value};
   border-width: 1px;
   border-style: solid;
-  border-color: #e0e0e0;
+
+  ${(props) => {
+    if (props.theme?.isDark) {
+      return `
+        background-color: rgb(var(--dark-background));
+        color: rgb(var(--dark-onBackground));
+        border-color: #383838;
+      `;
+    } else {
+      return `
+        background-color: rgb(var(--light-background));
+        color: rgb(var(--light-onBackground));
+        border-color: #e0e0e0;
+      `;
+    }
+  }}
 
   ${(props) => CardBase({ media: props.media, maxWidth: props.maxWidth })}
 `;
