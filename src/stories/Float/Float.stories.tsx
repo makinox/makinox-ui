@@ -1,8 +1,8 @@
 import { Story } from '@storybook/react/types-6-0';
+import { ThemeProvider } from 'styled-components';
 import { GiSwordAltar } from 'react-icons/gi';
 import { FloatType } from '../../types';
 import { Float } from '../..';
-import { ThemeProvider } from 'styled-components';
 
 export default {
   title: 'Makinox-ui/Float',
