@@ -11,6 +11,16 @@
   --light-onBackground: 0, 0, 0;
   --light-onSurface: 0, 0, 0;
   --light-onError: 255, 255, 255;
+  --dark-primary: 0, 0, 202;
+  --dark-secondary: 188, 204, 0;
+  --dark-background: 31, 31, 31;
+  --dark-surface: 18, 18, 18;
+  --dark-error: 194, 8, 15;
+  --dark-onPrimary: 255, 255, 255;
+  --dark-onSecondary: 0, 0, 0;
+  --dark-onBackground: 255, 255, 255;
+  --dark-onSurface: 255, 255, 255;
+  --dark-onError: 255, 255, 255;
 }
 
 .content-center {
@@ -299,4 +309,4 @@
 }
 
 
-/*# sourceMappingURL=main.b8b33c8f.chunk.css.map*/
+/*# sourceMappingURL=main.24b112a9.chunk.css.map*/
