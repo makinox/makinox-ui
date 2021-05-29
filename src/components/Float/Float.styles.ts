@@ -16,15 +16,40 @@ const FloatBase = css`
   appearance: none;
   overflow: hidden;
   transition: all 0.3s ease 0s;
-  background-color: rgb(var(--light-primary));
-  color: rgb(var(--light-onPrimary));
+
+  ${(props) => {
+    if (props.theme?.isDark) {
+      return `
+        background-color: rgb(var(--dark-primary));
+        color: rgb(var(--dark-onPrimary));
+      `;
+    } else {
+      return `
+        background-color: rgb(var(--light-primary));
+        color: rgb(var(--light-onPrimary));
+      `;
+    }
+  }}
 
   &:focus,
   &:active {
     outline: none;
   }
+  &:active {
+    transform: scale(1.01);
+  }
   &:hover {
-    background-color: ${'rgba(var(--light-primary), 0.8)'};
+    ${(props) => {
+      if (props.theme?.isDark) {
+        return `
+        background-color: rgba(var(--dark-primary), 0.8);
+      `;
+      } else {
+        return `
+        background-color: rgba(var(--light-primary), 0.8);
+      `;
+      }
+    }}
   }
 `;
 
