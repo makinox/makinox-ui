@@ -37,11 +37,34 @@ const buttonBase = css`
 export const ButtonContained = styled.button`
   ${buttonBase}
 
-  background-color: rgb(var(--light-primary));
-  color: rgb(var(--light-onPrimary));
+  ${(props) => {
+    if (props.theme?.isDark) {
+      return `
+        background-color: rgb(var(--dark-primary));
+        color: rgb(var(--dark-onPrimary));
+      `;
+    } else {
+      return `
+        background-color: rgb(var(--light-primary));
+        color: rgb(var(--light-onPrimary));
+      `;
+    }
+  }}
 
   &:hover {
-    background-color: ${'rgba(var(--light-primary), 0.8)'};
+    background-color: rgba(var(--light-primary), 0.8);
+
+    ${(props) => {
+      if (props.theme?.isDark) {
+        return `
+        background-color: rgba(var(--dark-primary), 0.8);
+      `;
+      } else {
+        return `
+        background-color: rgba(var(--light-primary), 0.8);
+      `;
+      }
+    }}
   }
 `;
 
@@ -49,11 +72,33 @@ export const ButtonOutline = styled.button`
   ${buttonBase}
 
   background-color: transparent;
-  border: 1px solid rgb(var(--light-primary));
-  color: rgb(var(--light-primary));
+
+  ${(props) => {
+    if (props.theme?.isDark) {
+      return `
+      border: 1px solid rgb(var(--dark-primary));
+      color: rgb(var(--dark-primary));
+      `;
+    } else {
+      return `
+        border: 1px solid rgb(var(--light-primary));
+        color: rgb(var(--light-primary));
+      `;
+    }
+  }}
 
   &:hover {
-    background-color: ${'rgba(var(--light-primary), 0.08)'};
+    ${(props) => {
+      if (props.theme?.isDark) {
+        return `
+        background-color: rgba(var(--dark-primary), 0.08);
+      `;
+      } else {
+        return `
+        background-color: rgba(var(--light-primary), 0.08);
+      `;
+      }
+    }}
   }
 `;
 
@@ -61,9 +106,30 @@ export const ButtonText = styled.button`
   ${buttonBase}
 
   background-color: transparent;
-  color: rgb(var(--light-primary));
+
+  ${(props) => {
+    if (props.theme?.isDark) {
+      return `
+        color: rgb(var(--dark-primary));
+      `;
+    } else {
+      return `
+        color: rgb(var(--light-primary));
+      `;
+    }
+  }}
 
   &:hover {
-    background-color: ${'rgba(var(--light-primary), 0.08)'};
+    ${(props) => {
+      if (props.theme?.isDark) {
+        return `
+        background-color: rgba(var(--dark-primary), 0.08);
+      `;
+      } else {
+        return `
+        background-color: rgba(var(--light-primary), 0.08);
+      `;
+      }
+    }}
   }
 `;

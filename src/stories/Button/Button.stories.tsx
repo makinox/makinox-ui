@@ -1,4 +1,5 @@
 import { Story } from '@storybook/react/types-6-0';
+import { ThemeProvider } from 'styled-components';
 import { GiCastle } from 'react-icons/gi';
 import { ButtonType } from '../../types';
 import { Button } from '../..';
@@ -57,4 +58,43 @@ TextIcon.args = {
       <GiCastle />
     </span>
   ),
+};
+
+export const DarkContained: Story<ButtonType> = (props: ButtonType) => (
+  <ThemeProvider theme={{ isDark: true }}>
+    <Button {...props} />
+  </ThemeProvider>
+);
+DarkContained.args = {
+  use: 'contained',
+  message: 'contained',
+};
+DarkContained.parameters = {
+  backgrounds: { default: 'dark' },
+};
+
+export const DarkOutlined: Story<ButtonType> = (props: ButtonType) => (
+  <ThemeProvider theme={{ isDark: true }}>
+    <Button {...props} />
+  </ThemeProvider>
+);
+DarkOutlined.args = {
+  use: 'outlined',
+  message: 'outlined',
+};
+DarkOutlined.parameters = {
+  backgrounds: { default: 'dark' },
+};
+
+export const DarkText: Story<ButtonType> = (props: ButtonType) => (
+  <ThemeProvider theme={{ isDark: true }}>
+    <Button {...props} />
+  </ThemeProvider>
+);
+DarkText.args = {
+  use: 'text',
+  message: 'text',
+};
+DarkText.parameters = {
+  backgrounds: { default: 'dark' },
 };
