@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { DropdownStyle } from './Dropdown.types';
 
-export const DropdownHiden = styled.div`
+export const DropdownHiden = styled.div<DropdownStyle>`
   box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px, rgb(0 0 0 / 14%) 0px 1px 1px 0px, rgb(0 0 0 / 12%) 0px 1px 3px 0px;
   flex-direction: column;
   position: absolute;
@@ -8,7 +9,7 @@ export const DropdownHiden = styled.div`
   display: none;
 
   ${(props) => {
-    if (props.theme?.isDark) {
+    if (props.theme?.isDark || props.isDark) {
       return `
         background-color: rgb(var(--dark-background));
         color: rgb(var(--dark-onBackground));
@@ -22,7 +23,7 @@ export const DropdownHiden = styled.div`
   }}
 `;
 
-export const DropdownContainer = styled.div`
+export const DropdownContainer = styled.div<DropdownStyle>`
   position: relative;
 
   &:hover > ${DropdownHiden} {
@@ -30,7 +31,7 @@ export const DropdownContainer = styled.div`
   }
 
   ${(props) => {
-    if (props.theme?.isDark) {
+    if (props.theme?.isDark || props.isDark) {
       return `
         color: rgb(var(--dark-onBackground));
       `;

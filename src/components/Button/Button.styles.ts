@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { ButtonStyle } from './Button.types';
 
 const buttonBase = css`
   cursor: pointer;
@@ -34,11 +35,11 @@ const buttonBase = css`
   }
 `;
 
-export const ButtonContained = styled.button`
+export const ButtonContained = styled.button<ButtonStyle>`
   ${buttonBase}
 
   ${(props) => {
-    if (props.theme?.isDark) {
+    if (props.theme?.isDark || props.isDark) {
       return `
         background-color: rgb(var(--dark-primary));
         color: rgb(var(--dark-onPrimary));
@@ -55,7 +56,7 @@ export const ButtonContained = styled.button`
     background-color: rgba(var(--light-primary), 0.8);
 
     ${(props) => {
-      if (props.theme?.isDark) {
+      if (props.theme?.isDark || props.isDark) {
         return `
         background-color: rgba(var(--dark-primary), 0.8);
       `;
@@ -68,13 +69,13 @@ export const ButtonContained = styled.button`
   }
 `;
 
-export const ButtonOutline = styled.button`
+export const ButtonOutline = styled.button<ButtonStyle>`
   ${buttonBase}
 
   background-color: transparent;
 
   ${(props) => {
-    if (props.theme?.isDark) {
+    if (props.theme?.isDark || props.isDark) {
       return `
       border: 1px solid rgb(var(--dark-primary));
       color: rgb(var(--dark-primary));
@@ -89,7 +90,7 @@ export const ButtonOutline = styled.button`
 
   &:hover {
     ${(props) => {
-      if (props.theme?.isDark) {
+      if (props.theme?.isDark || props.isDark) {
         return `
         background-color: rgba(var(--dark-primary), 0.08);
       `;
@@ -102,13 +103,13 @@ export const ButtonOutline = styled.button`
   }
 `;
 
-export const ButtonText = styled.button`
+export const ButtonText = styled.button<ButtonStyle>`
   ${buttonBase}
 
   background-color: transparent;
 
   ${(props) => {
-    if (props.theme?.isDark) {
+    if (props.theme?.isDark || props.isDark) {
       return `
         color: rgb(var(--dark-primary));
       `;
@@ -121,7 +122,7 @@ export const ButtonText = styled.button`
 
   &:hover {
     ${(props) => {
-      if (props.theme?.isDark) {
+      if (props.theme?.isDark || props.isDark) {
         return `
         background-color: rgba(var(--dark-primary), 0.08);
       `;

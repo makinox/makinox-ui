@@ -5,3 +5,7 @@ export interface TopBarType extends HTMLAttributes<HTMLElement> {
   centerChild?: React.ReactNode;
   rightChild?: React.ReactNode;
 }
+
+export interface TopBarStyle {
+  isDark?: boolean;
+}

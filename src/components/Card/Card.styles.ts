@@ -52,7 +52,7 @@ export const CardElevated = styled.article<CardStyle>`
   box-sizing: border-box;
 
   ${(props) => {
-    if (props.theme?.isDark) {
+    if (props.theme?.isDark || props.isDark) {
       return `
         background-color: rgb(var(--dark-background));
         color: rgb(var(--dark-onBackground));
@@ -76,7 +76,7 @@ export const CardOutlined = styled.article<CardStyle>`
   border-style: solid;
 
   ${(props) => {
-    if (props.theme?.isDark) {
+    if (props.theme?.isDark || props.isDark) {
       return `
         background-color: rgb(var(--dark-background));
         color: rgb(var(--dark-onBackground));

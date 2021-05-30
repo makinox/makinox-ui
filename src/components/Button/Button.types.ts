@@ -5,3 +5,7 @@ export interface ButtonType extends ButtonHTMLAttributes<HTMLButtonElement> {
   message: string;
   icon?: React.ReactNode;
 }
+
+export interface ButtonStyle extends ButtonHTMLAttributes<HTMLButtonElement> {
+  isDark?: boolean;
+}

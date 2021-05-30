@@ -16,4 +16,5 @@ export interface CardType extends HTMLAttributes<HTMLElement> {
 export interface CardStyle {
   media?: string;
   maxWidth?: string;
+  isDark?: boolean;
 }
