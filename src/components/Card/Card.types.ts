@@ -11,6 +11,7 @@ export interface CardType extends HTMLAttributes<HTMLElement> {
   customMedia?: HTMLImageElement | Element | any;
   buttons?: [HTMLButtonElement | ButtonType | Element | any, HTMLButtonElement | ButtonType | Element | any];
   children?: React.ReactNode;
+  isDark?: boolean;
 }
 
 export interface CardStyle {
