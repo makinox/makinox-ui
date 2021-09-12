@@ -1,5 +1,5 @@
 import { Story } from '@storybook/react/types-6-0';
-import FluidContainer from '../../components/FluidContainer/FluidContainer.styles';
+import { FluidContainer } from '../../';
 
 export default {
   title: 'Makinox-ui/FluidContainer',
