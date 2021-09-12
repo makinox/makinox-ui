@@ -38,3 +38,6 @@ export const WithDark: Story = () => (
     </section>
   </nav>
 );
+WithDark.parameters = {
+  backgrounds: { default: 'dark' },
+};
