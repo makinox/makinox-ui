@@ -1,18 +1,17 @@
 import { Story } from '@storybook/react/types-6-0';
-import { FluidContainerType } from '../../types';
-import { FluidContainer } from '../../';
+import FluidContainer from '../../components/FluidContainer/FluidContainer.styles';
 
 export default {
   title: 'Makinox-ui/FluidContainer',
-  component: FluidContainer,
+  component: <section />,
 };
 
-export const WithChild: Story<FluidContainerType> = (props: FluidContainerType) => <FluidContainer {...props} />;
+export const WithChild: Story = (props) => <section className={FluidContainer()} {...props} />;
 WithChild.args = {
-  children: <span>hola children</span>,
+  children: <span>hole children</span>,
 };
 
-export const WithoutChild: Story<FluidContainerType> = (props: FluidContainerType) => <FluidContainer {...props} />;
+export const WithoutChild: Story = (props) => <section className={FluidContainer()} {...props} />;
 WithoutChild.args = {
   children: <></>,
 };
