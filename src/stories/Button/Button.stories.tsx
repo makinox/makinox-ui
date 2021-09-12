@@ -1,100 +1,46 @@
-import { Story } from '@storybook/react/types-6-0';
-import { ThemeProvider } from 'styled-components';
 import { GiCastle } from 'react-icons/gi';
-import { ButtonType } from '../../types';
-import { Button } from '../..';
+import { ButtonContained, ButtonOutline, ButtonText } from '../..';
 
 export default {
   title: 'Makinox-ui/Button',
-  component: Button,
+  component: <button />,
 };
 
-export const Contained: Story<ButtonType> = (props: ButtonType) => <Button {...props} />;
-Contained.args = {
-  use: 'contained',
-  message: 'contained',
-};
+export const Contained = () => <button className={ButtonContained()}>contained</button>;
 
-export const Outlined: Story<ButtonType> = (props: ButtonType) => <Button {...props} />;
-Outlined.args = {
-  use: 'outlined',
-  message: 'outlined',
-};
+export const Outlined = () => <button className={ButtonOutline()}>Outlined</button>;
 
-export const Text: Story<ButtonType> = (props: ButtonType) => <Button {...props} />;
-Text.args = {
-  use: 'text',
-  message: 'text',
-};
+export const Text = () => <button className={ButtonText()}>Text</button>;
 
-export const ContainedIcon: Story<ButtonType> = (props: ButtonType) => <Button {...props} />;
-ContainedIcon.args = {
-  use: 'contained',
-  message: 'contained',
-  icon: (
-    <span style={{ marginRight: '8px' }}>
-      <GiCastle />
-    </span>
-  ),
-};
-
-export const OutlinedIcon: Story<ButtonType> = (props: ButtonType) => <Button {...props} />;
-OutlinedIcon.args = {
-  use: 'outlined',
-  message: 'outlined',
-  icon: (
-    <span style={{ marginRight: '8px' }}>
-      <GiCastle />
-    </span>
-  ),
-};
-
-export const TextIcon: Story<ButtonType> = (props: ButtonType) => <Button {...props} />;
-TextIcon.args = {
-  use: 'text',
-  message: 'text',
-  icon: (
-    <span style={{ marginRight: '8px' }}>
-      <GiCastle />
-    </span>
-  ),
-};
-
-export const DarkContained: Story<ButtonType> = (props: ButtonType) => (
-  <ThemeProvider theme={{ isDark: true }}>
-    <Button {...props} />
-  </ThemeProvider>
+export const ContainedIcon = () => (
+  <button className={ButtonContained()}>
+    <GiCastle />
+  </button>
 );
-DarkContained.args = {
-  use: 'contained',
-  message: 'contained',
-};
+
+export const OutlinedIcon = () => (
+  <button className={ButtonOutline()}>
+    <GiCastle />
+  </button>
+);
+
+export const TextIcon = () => (
+  <button className={ButtonText()}>
+    <GiCastle />
+  </button>
+);
+
+export const DarkContained = () => <button className={ButtonContained({ isDark: true })}>contained</button>;
 DarkContained.parameters = {
   backgrounds: { default: 'dark' },
 };
 
-export const DarkOutlined: Story<ButtonType> = (props: ButtonType) => (
-  <ThemeProvider theme={{ isDark: true }}>
-    <Button {...props} />
-  </ThemeProvider>
-);
-DarkOutlined.args = {
-  use: 'outlined',
-  message: 'outlined',
-};
+export const DarkOutlined = () => <button className={ButtonOutline({ isDark: true })}>Outlined</button>;
 DarkOutlined.parameters = {
   backgrounds: { default: 'dark' },
 };
 
-export const DarkText: Story<ButtonType> = (props: ButtonType) => (
-  <ThemeProvider theme={{ isDark: true }}>
-    <Button {...props} />
-  </ThemeProvider>
-);
-DarkText.args = {
-  use: 'text',
-  message: 'text',
-};
+export const DarkText = () => <button className={ButtonText({ isDark: true })}>Text</button>;
 DarkText.parameters = {
   backgrounds: { default: 'dark' },
 };

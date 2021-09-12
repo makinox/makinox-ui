@@ -1,136 +1,111 @@
-import styled, { css } from 'styled-components';
-import { ButtonStyle } from './Button.types';
+import { css } from '@stitches/core';
 
-const buttonBase = css`
-  cursor: pointer;
-  font-size: 0.875rem;
-  line-height: 2.25rem;
-  font-weight: 500;
-  letter-spacing: 0.0892857143em;
-  text-decoration: none;
-  text-transform: uppercase;
-  padding: 0 16px 0 16px;
-  display: inline-flex;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  min-width: 64px;
-  border: none;
-  outline: none;
-  line-height: inherit;
-  user-select: none;
-  overflow: visible;
-  vertical-align: middle;
-  border-radius: 4px;
-  height: 36px;
-  transition: all 0.3s ease 0s;
+const baseButton = {
+  cursor: 'pointer',
+  fontSize: '0.875rem',
+  lineHeight: '2.25rem',
+  fontWeight: 500,
+  letterSpacing: '0.0892857143em',
+  textDecoration: 'none',
+  textTransform: 'uppercase',
+  padding: '0 16px 0 16px',
+  display: 'inline-flex',
+  position: 'relative',
+  alignItems: 'center',
+  justifyContent: 'center',
+  boxSizing: 'border-box',
+  minWidth: '64px',
+  border: 'none',
+  outline: 'none',
+  // lineHeight: 'inherit',
+  userSelect: 'none',
+  overflow: 'visible',
+  verticalAlign: 'middle',
+  borderRadius: '4px',
+  height: '36px',
+  transition: 'all 0.3s ease 0s',
 
-  &:focus,
-  &:active {
-    outline: none;
-  }
-  &:active {
-    transform: scale(1.01);
-  }
-`;
+  '&:focus, &:active': {
+    outline: 'none',
+  },
+  '&:active': {
+    transform: 'scale(1.01)',
+  },
+};
 
-export const ButtonContained = styled.button<ButtonStyle>`
-  ${buttonBase}
+export const ButtonContained = css({
+  ...baseButton,
 
-  ${(props) => {
-    if (props.theme?.isDark || props.isDark) {
-      return `
-        background-color: rgb(var(--dark-primary));
-        color: rgb(var(--dark-onPrimary));
-      `;
-    } else {
-      return `
-        background-color: rgb(var(--light-primary));
-        color: rgb(var(--light-onPrimary));
-      `;
-    }
-  }}
+  variants: {
+    isDark: {
+      true: {
+        backgroundColor: 'rgb(var(--dark-primary))',
+        color: 'rgb(var(--dark-onPrimary))',
+        '&:hover': {
+          backgroundColor: 'rgba(var(--dark-primary), 0.8)',
+        },
+      },
+      false: {
+        backgroundColor: 'rgb(var(--light-primary))',
+        color: 'rgb(var(--light-onPrimary))',
+        '&:hover': {
+          backgroundColor: 'rgba(var(--light-primary), 0.8)',
+        },
+      },
+    },
+  },
 
-  &:hover {
-    background-color: rgba(var(--light-primary), 0.8);
+  defaultVariants: { isDark: false },
+});
 
-    ${(props) => {
-      if (props.theme?.isDark || props.isDark) {
-        return `
-        background-color: rgba(var(--dark-primary), 0.8);
-      `;
-      } else {
-        return `
-        background-color: rgba(var(--light-primary), 0.8);
-      `;
-      }
-    }}
-  }
-`;
+export const ButtonOutline = css({
+  ...baseButton,
 
-export const ButtonOutline = styled.button<ButtonStyle>`
-  ${buttonBase}
+  backgroundColor: 'transparent',
 
-  background-color: transparent;
+  variants: {
+    isDark: {
+      true: {
+        border: '1px solid rgb(var(--dark-primary))',
+        color: 'rgb(var(--dark-primary))',
+        '&:hover': {
+          backgroundColor: 'rgba(var(--dark-primary), 0.08)',
+        },
+      },
+      false: {
+        border: '1px solid rgb(var(--light-primary))',
+        color: 'rgb(var(--light-primary))',
+        '&:hover': {
+          backgroundColor: 'rgba(var(--light-primary), 0.08)',
+        },
+      },
+    },
+  },
 
-  ${(props) => {
-    if (props.theme?.isDark || props.isDark) {
-      return `
-      border: 1px solid rgb(var(--dark-primary));
-      color: rgb(var(--dark-primary));
-      `;
-    } else {
-      return `
-        border: 1px solid rgb(var(--light-primary));
-        color: rgb(var(--light-primary));
-      `;
-    }
-  }}
+  defaultVariants: { isDark: false },
+});
 
-  &:hover {
-    ${(props) => {
-      if (props.theme?.isDark || props.isDark) {
-        return `
-        background-color: rgba(var(--dark-primary), 0.08);
-      `;
-      } else {
-        return `
-        background-color: rgba(var(--light-primary), 0.08);
-      `;
-      }
-    }}
-  }
-`;
+export const ButtonText = css({
+  ...baseButton,
 
-export const ButtonText = styled.button<ButtonStyle>`
-  ${buttonBase}
+  backgroundColor: 'transparent',
 
-  background-color: transparent;
+  variants: {
+    isDark: {
+      true: {
+        color: 'rgb(var(--dark-primary))',
+        '&:hover': {
+          backgroundColor: 'rgba(var(--dark-primary), 0.08)',
+        },
+      },
+      false: {
+        color: 'rgb(var(--light-primary))',
+        '&:hover': {
+          backgroundColor: 'rgba(var(--light-primary), 0.08)',
+        },
+      },
+    },
+  },
 
-  ${(props) => {
-    if (props.theme?.isDark || props.isDark) {
-      return `
-        color: rgb(var(--dark-primary));
-      `;
-    } else {
-      return `
-        color: rgb(var(--light-primary));
-      `;
-    }
-  }}
-
-  &:hover {
-    ${(props) => {
-      if (props.theme?.isDark || props.isDark) {
-        return `
-        background-color: rgba(var(--dark-primary), 0.08);
-      `;
-      } else {
-        return `
-        background-color: rgba(var(--light-primary), 0.08);
-      `;
-      }
-    }}
-  }
-`;
+  defaultVariants: { isDark: false },
+});

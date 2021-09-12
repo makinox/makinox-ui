@@ -1,5 +1,5 @@
 import { Story } from '@storybook/react/types-6-0';
-import { Card, Button } from '../..';
+import { Card, ButtonText } from '../..';
 
 export default {
   title: 'Makinox-ui/Card',
@@ -54,8 +54,8 @@ export const WithButtons: Story = (args) => (
       <p className="body2">{args.text}</p>
     </div>
     <div className="card-bottom">
-      <Button key="Action uno" message="Action uno" use="text" />
-      <Button key="Action dos" message="Action dos" use="text" />
+      <button className={ButtonText()}>Action uno</button>
+      <button className={ButtonText()}>Action dos</button>
     </div>
   </article>
 );
@@ -77,8 +77,8 @@ export const Media: Story = (args) => (
       <p className="body2">{args.text}</p>
     </div>
     <div className="card-bottom">
-      <Button key="Action uno" message="Action uno" use="text" />
-      <Button key="Action dos" message="Action dos" use="text" />
+      <button className={ButtonText()}>Action uno</button>
+      <button className={ButtonText()}>Action dos</button>
     </div>
   </article>
 );
@@ -142,8 +142,8 @@ export const DarkWithButtons: Story = (args) => (
       <p className="body2">{args.text}</p>
     </div>
     <div className="card-bottom">
-      <Button key="Action uno" message="Action uno" use="text" />
-      <Button key="Action dos" message="Action dos" use="text" />
+      <button className={ButtonText()}>Action uno</button>
+      <button className={ButtonText()}>Action dos</button>
     </div>
   </article>
 );
