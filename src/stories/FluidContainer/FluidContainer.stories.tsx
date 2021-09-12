@@ -1,4 +1,3 @@
-import { Story } from '@storybook/react/types-6-0';
 import { FluidContainer } from '../../';
 
 export default {
@@ -6,12 +5,12 @@ export default {
   component: <section />,
 };
 
-export const WithChild: Story = (props) => <section className={FluidContainer()} {...props} />;
+export const WithChild = () => <section className={FluidContainer()} />;
 WithChild.args = {
   children: <span>hole children</span>,
 };
 
-export const WithoutChild: Story = (props) => <section className={FluidContainer()} {...props} />;
+export const WithoutChild = () => <section className={FluidContainer()} />;
 WithoutChild.args = {
   children: <></>,
 };

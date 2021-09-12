@@ -1,49 +1,50 @@
-import styled from 'styled-components';
-import { DropdownStyle } from './Dropdown.types';
+import { css } from '@stitches/core';
 
-export const DropdownHiden = styled.div<DropdownStyle>`
-  box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px, rgb(0 0 0 / 14%) 0px 1px 1px 0px, rgb(0 0 0 / 12%) 0px 1px 3px 0px;
-  flex-direction: column;
-  position: absolute;
-  border-radius: 3px;
-  display: none;
+export const DropdownHiden = css({
+  boxShadow: 'rgb(0 0 0 / 20%) 0px 2px 1px -1px, rgb(0 0 0 / 14%) 0px 1px 1px 0px, rgb(0 0 0 / 12%) 0px 1px 3px 0px',
+  flexDirection: 'column',
+  position: 'absolute',
+  borderRadius: '3px',
+  display: 'none',
 
-  ${(props) => {
-    if (props.theme?.isDark || props.isDark) {
-      return `
-        background-color: rgb(var(--dark-background));
-        color: rgb(var(--dark-onBackground));
-      `;
-    } else {
-      return `
-        background-color: rgb(var(--light-background));
-        color: rgb(var(--light-onBackground));
-      `;
-    }
-  }}
-`;
+  variants: {
+    isDark: {
+      true: {
+        backgroundColor: 'rgb(var(--dark-background))',
+        color: 'rgb(var(--dark-onBackground))',
+      },
+      false: {
+        backgroundColor: 'rgb(var(--light-background))',
+        color: 'rgb(var(--light-onBackground))',
+      },
+    },
+  },
 
-export const DropdownContainer = styled.div<DropdownStyle>`
-  position: relative;
+  defaultVariants: { isDark: false },
+});
 
-  &:hover > ${DropdownHiden} {
-    display: flex !important;
-  }
+export const DropdownContainer = css({
+  position: 'relative',
 
-  ${(props) => {
-    if (props.theme?.isDark || props.isDark) {
-      return `
-        color: rgb(var(--dark-onBackground));
-      `;
-    } else {
-      return `
-        color: rgb(var(--light-onBackground));
-      `;
-    }
-  }}
-`;
+  [`&:hover > .${DropdownHiden}`]: {
+    display: 'flex !important',
+  },
 
-export const DropdownItem = styled.span`
-  display: inline-block;
-  cursor: pointer;
-`;
+  variants: {
+    isDark: {
+      true: {
+        color: 'rgb(var(--dark-onBackground))',
+      },
+      false: {
+        color: 'rgb(var(--light-onBackground))',
+      },
+    },
+  },
+
+  defaultVariants: { isDark: false },
+});
+
+export const DropdownItem = css({
+  display: 'inline-block',
+  cursor: 'pointer',
+});

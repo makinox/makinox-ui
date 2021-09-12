@@ -1,4 +1,3 @@
-import { Story } from '@storybook/react/types-6-0';
 import { GiSwordAltar } from 'react-icons/gi';
 import { Float } from '../..';
 
@@ -7,19 +6,19 @@ export default {
   component: Float,
 };
 
-export const DefaultIcon: Story = () => (
+export const DefaultIcon = () => (
   <button className={Float()}>
     <GiSwordAltar size={25} />
   </button>
 );
 
-export const MiniIcon: Story = () => (
+export const MiniIcon = () => (
   <button className={Float({ type: 'mini' })}>
     <GiSwordAltar size={20} />
   </button>
 );
 
-export const DarkFloat: Story = () => (
+export const DarkFloat = () => (
   <button className={Float({ isDark: true })}>
     <GiSwordAltar size={25} />
   </button>
@@ -28,7 +27,7 @@ DarkFloat.parameters = {
   backgrounds: { default: 'dark' },
 };
 
-export const DarkFloatMini: Story = () => (
+export const DarkFloatMini = () => (
   <button className={Float({ type: 'mini', isDark: true })}>
     <GiSwordAltar size={20} />
   </button>

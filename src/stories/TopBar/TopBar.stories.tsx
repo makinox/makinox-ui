@@ -1,4 +1,3 @@
-import { Story } from '@storybook/react/types-6-0';
 import { FluidContainer } from '../..';
 import { TopBar } from '../..';
 
@@ -7,7 +6,7 @@ export default {
   component: <nav />,
 };
 
-export const LightMode: Story = () => (
+export const LightMode = () => (
   <nav className={TopBar()}>
     <section className={`flex justify-between items-center ${FluidContainer()}`}>
       <div>
@@ -23,7 +22,7 @@ export const LightMode: Story = () => (
   </nav>
 );
 
-export const WithDark: Story = () => (
+export const WithDark = () => (
   <nav className={TopBar({ isDark: 'true' })}>
     <section className={`flex justify-between items-center ${FluidContainer()}`}>
       <div>

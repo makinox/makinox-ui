@@ -29,10 +29,16 @@ export default css({
       true: {
         backgroundColor: 'rgb(var(--dark-primary))',
         color: 'rgb(var(--dark-onPrimary))',
+        '&:hover': {
+          backgroundColor: 'rgba(var(--dark-primary), 0.8)',
+        },
       },
       false: {
         backgroundColor: 'rgb(var(--light-primary))',
         color: 'rgb(var(--light-onPrimary))',
+        '&:hover': {
+          backgroundColor: 'rgba(var(--light-primary), 0.8)',
+        },
       },
     },
     type: {
