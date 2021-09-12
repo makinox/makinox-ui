@@ -1,30 +1,42 @@
-import { Story } from '@storybook/react/types-6-0';
-import { ThemeProvider } from 'styled-components';
-import { TopBarType } from '../../types';
-import { TopBar } from '../../';
+import { FluidContainer } from '../..';
+import { TopBar } from '../..';
 
 export default {
   title: 'Makinox-ui/TopBar',
-  component: TopBar,
+  component: <nav />,
 };
 
-export const WithChild: Story<TopBarType> = (props: TopBarType) => <TopBar {...props} />;
-WithChild.args = {
-  leftChild: <span>leftChild</span>,
-  centerChild: <span>centerChild</span>,
-  rightChild: <span>rightChild</span>,
-};
-
-export const WithDark: Story<TopBarType> = (props: TopBarType) => (
-  <ThemeProvider theme={{ isDark: true }}>
-    <TopBar {...props} />
-  </ThemeProvider>
+export const LightMode = () => (
+  <nav className={TopBar()}>
+    <section className={`flex justify-between items-center ${FluidContainer()}`}>
+      <div>
+        <span>leftChild</span>
+      </div>
+      <div>
+        <span>centerChild</span>
+      </div>
+      <div>
+        <span>rightChild</span>
+      </div>
+    </section>
+  </nav>
 );
-WithDark.args = {
-  leftChild: <span>leftChild</span>,
-  centerChild: <span>centerChild</span>,
-  rightChild: <span>rightChild</span>,
-};
+
+export const WithDark = () => (
+  <nav className={TopBar({ isDark: 'true' })}>
+    <section className={`flex justify-between items-center ${FluidContainer()}`}>
+      <div>
+        <span>leftChild</span>
+      </div>
+      <div>
+        <span>centerChild</span>
+      </div>
+      <div>
+        <span>rightChild</span>
+      </div>
+    </section>
+  </nav>
+);
 WithDark.parameters = {
   backgrounds: { default: 'dark' },
 };
