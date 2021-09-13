@@ -1,6 +1,6 @@
 {
   "name": "@makinox/makinox-ui",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "main": "./dist/index.js",
   "module": "./dist/index.es.js",
   "author": "Jesus Bossa <x@jesusbossa.dev> (https://jesusbossa.dev/)",
@@ -13,8 +13,7 @@
     "@stitches/core": "^1.1.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
-    "styled-components": "^5.2.3"
+    "react-scripts": "4.0.3"
   },
   "peerDependencies": {
     "react": "^17.0.2",
@@ -65,7 +64,6 @@
     "@storybook/node-logger": "^6.3.8",
     "@storybook/preset-create-react-app": "^3.2.0",
     "@storybook/react": "^6.3.8",
-    "@types/styled-components": "^5.1.9",
     "react-icons": "^4.2.0",
     "rollup": "2.30",
     "rollup-plugin-peer-deps-external": "^2.2.4",
