@@ -1,6 +1,6 @@
 {
   "name": "@makinox/makinox-ui",
-  "version": "1.5.2",
+  "version": "1.6.0",
   "main": "./dist/index.js",
   "module": "./dist/index.es.js",
   "author": "Jesus Bossa <x@jesusbossa.dev> (https://jesusbossa.dev/)",
@@ -10,18 +10,12 @@
   "registry": "https://npm.pkg.github.com",
   "repository": "git://github.com/makinox/makinox-ui",
   "dependencies": {
-    "@stitches/core": "^1.1.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3"
-  },
-  "peerDependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "@stitches/core": "^1.2.7"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "rollup -c && rollup -c rollup.config.css.js",
+    "clean": "node ./src/cleaner",
+    "build": "rollup -c && rollup -c rollup.config.css.js && npm run clean",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
@@ -64,7 +58,11 @@
     "@storybook/node-logger": "^6.3.8",
     "@storybook/preset-create-react-app": "^3.2.0",
     "@storybook/react": "^6.3.8",
+    "node-sass": "^7.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "react-icons": "^4.2.0",
+    "react-scripts": "4.0.3",
     "rollup": "2.30",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-scss": "^2.6.1",
