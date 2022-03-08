@@ -117,7 +117,7 @@ export const ButtonNeumorphic = css({
       true: {
         color: 'rgb(var(--dark-secondary))',
         background: 'transparent',
-        boxShadow: '6px 6px 12px #1e1e1e, -6px -6px 12px rgb(var(--dark-background))',
+        boxShadow: '0.4rem 0.4rem 0.6rem #00000040',
 
         '&:hover': {
           backgroundColor: 'rgba(var(--dark-secondary), 0.08)',

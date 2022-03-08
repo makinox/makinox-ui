@@ -59,7 +59,7 @@ export default css({
       },
       darkNeumorphic: {
         borderRadius: '4px',
-        boxShadow: '6px 6px 12px #1e1e1e, -6px -6px 12px rgb(var(--dark-background))',
+        boxShadow: '0.4rem 0.4rem 0.6rem #00000040',
       },
     },
     isDark: {
