@@ -17,7 +17,6 @@ const baseButton = {
   minWidth: '64px',
   border: 'none',
   outline: 'none',
-  // lineHeight: 'inherit',
   userSelect: 'none',
   overflow: 'visible',
   verticalAlign: 'middle',
@@ -110,23 +109,38 @@ export const ButtonText = css({
   defaultVariants: { isDark: false },
 });
 
-export const ButtonNeu = css({
+export const ButtonNeumorphic = css({
   ...baseButton,
-
-  backgroundColor: 'green',
 
   variants: {
     isDark: {
       true: {
-        color: 'rgb(var(--dark-primary))',
+        color: 'rgb(var(--dark-secondary))',
+        background: 'transparent',
+        boxShadow: '6px 6px 12px #1e1e1e, -6px -6px 12px rgb(var(--dark-background))',
+
         '&:hover': {
-          backgroundColor: 'rgba(var(--dark-primary), 0.08)',
+          backgroundColor: 'rgba(var(--dark-secondary), 0.08)',
+        },
+
+        '&:active': {
+          color: 'rgba(var(--dark-secondary), 0.5)',
+          backgroundColor: 'rgba(var(--dark-secondary), 0.05)',
+          boxShadow: 'inset 4px 4px 12px #1e1e1e, inset -4px -4px 12px rgb(var(--dark-background))',
         },
       },
       false: {
         color: 'rgb(var(--light-primary))',
+        background: 'transparent',
+        boxShadow: '6px 6px 12px #c5c5c5, -6px -6px 12px rgb(var(--light-background))',
+
         '&:hover': {
           backgroundColor: 'rgba(var(--light-primary), 0.08)',
+        },
+        '&:active': {
+          color: 'rgba(var(--light-primary), 0.5)',
+          backgroundColor: 'rgba(var(--light-primary), 0.05)',
+          boxShadow: 'inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px rgb(var(--light-background))',
         },
       },
     },

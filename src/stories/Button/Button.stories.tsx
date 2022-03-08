@@ -1,5 +1,5 @@
 import { GiCastle } from 'react-icons/gi';
-import { ButtonContained, ButtonOutline, ButtonText } from '../..';
+import { ButtonContained, ButtonOutline, ButtonText, ButtonNeumorphic } from '../..';
 
 export default {
   title: 'Makinox-ui/Button',
@@ -11,6 +11,8 @@ export const Contained = () => <button className={ButtonContained()}>contained</
 export const Outlined = () => <button className={ButtonOutline()}>Outlined</button>;
 
 export const Text = () => <button className={ButtonText()}>Text</button>;
+
+export const Neumorphic = () => <button className={ButtonNeumorphic()}>Text</button>;
 
 export const ContainedIcon = () => (
   <button className={ButtonContained()}>
@@ -42,5 +44,10 @@ DarkOutlined.parameters = {
 
 export const DarkText = () => <button className={ButtonText({ isDark: true })}>Text</button>;
 DarkText.parameters = {
+  backgrounds: { default: 'dark' },
+};
+
+export const DarkNeumorphic = () => <button className={ButtonNeumorphic({ isDark: true })}>Text</button>;
+DarkNeumorphic.parameters = {
   backgrounds: { default: 'dark' },
 };
