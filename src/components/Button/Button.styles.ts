@@ -109,3 +109,28 @@ export const ButtonText = css({
 
   defaultVariants: { isDark: false },
 });
+
+export const ButtonNeu = css({
+  ...baseButton,
+
+  backgroundColor: 'green',
+
+  variants: {
+    isDark: {
+      true: {
+        color: 'rgb(var(--dark-primary))',
+        '&:hover': {
+          backgroundColor: 'rgba(var(--dark-primary), 0.08)',
+        },
+      },
+      false: {
+        color: 'rgb(var(--light-primary))',
+        '&:hover': {
+          backgroundColor: 'rgba(var(--light-primary), 0.08)',
+        },
+      },
+    },
+  },
+
+  defaultVariants: { isDark: false },
+});
