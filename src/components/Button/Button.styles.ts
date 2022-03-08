@@ -38,10 +38,10 @@ export const ButtonContained = css({
   variants: {
     isDark: {
       true: {
-        backgroundColor: 'rgb(var(--dark-primary))',
-        color: 'rgb(var(--dark-onPrimary))',
+        backgroundColor: 'rgb(var(--dark-secondary))',
+        color: 'rgb(var(--dark-onsecondary))',
         '&:hover': {
-          backgroundColor: 'rgba(var(--dark-primary), 0.8)',
+          backgroundColor: 'rgba(var(--dark-secondary), 0.8)',
         },
       },
       false: {
@@ -65,10 +65,10 @@ export const ButtonOutline = css({
   variants: {
     isDark: {
       true: {
-        border: '1px solid rgb(var(--dark-primary))',
-        color: 'rgb(var(--dark-primary))',
+        border: '1px solid rgb(var(--dark-secondary))',
+        color: 'rgb(var(--dark-secondary))',
         '&:hover': {
-          backgroundColor: 'rgba(var(--dark-primary), 0.08)',
+          backgroundColor: 'rgba(var(--dark-secondary), 0.08)',
         },
       },
       false: {
@@ -92,9 +92,9 @@ export const ButtonText = css({
   variants: {
     isDark: {
       true: {
-        color: 'rgb(var(--dark-primary))',
+        color: 'rgb(var(--dark-secondary))',
         '&:hover': {
-          backgroundColor: 'rgba(var(--dark-primary), 0.08)',
+          backgroundColor: 'rgba(var(--dark-secondary), 0.08)',
         },
       },
       false: {
