@@ -2,6 +2,7 @@ import { DropdownContainer, DropdownHiden, DropdownItem } from './components/Dro
 import FluidContainer from './components/FluidContainer/FluidContainer.styles';
 import TopBar from './components/TopBar/TopBar.styles';
 import Float from './components/Float/Float.styles';
+import Spinner from './components/Spinner/Spinner.styles';
 import Card from './components/Card/Card.styles';
 import { ButtonContained, ButtonOutline, ButtonText, ButtonNeumorphic } from './components/Button/Button.styles';
 
@@ -19,6 +20,7 @@ export {
   TopBar,
   FluidContainer,
   Float,
+  Spinner,
   DropdownContainer,
   DropdownHiden,
   DropdownItem,
