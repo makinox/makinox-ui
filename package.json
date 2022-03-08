@@ -1,6 +1,6 @@
 {
   "name": "@makinox/makinox-ui",
-  "version": "1.6.2",
+  "version": "1.6.5",
   "main": "./dist/index.js",
   "module": "./dist/index.es.js",
   "author": "Jesus Bossa <x@jesusbossa.dev> (https://jesusbossa.dev/)",
