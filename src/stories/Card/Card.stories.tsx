@@ -44,6 +44,24 @@ Outlined.args = {
   text: 'text',
 };
 
+export const Neumorphic: Story = (args) => (
+  <article className={Card({ type: args.type })}>
+    <div className="card-header">
+      <h6 className="headline6">{args.title}</h6>
+      <span className="subtitle1">{args.secondary}</span>
+    </div>
+    <div className="card-body">
+      <p className="body2">{args.text}</p>
+    </div>
+  </article>
+);
+Neumorphic.args = {
+  type: 'neumorphic',
+  title: 'title',
+  secondary: 'secondary',
+  text: 'text',
+};
+
 export const WithButtons: Story = (args) => (
   <article className={Card({ type: args.type })}>
     <div className="card-header">
@@ -128,6 +146,27 @@ DarkOutlined.args = {
   text: 'text',
 };
 DarkOutlined.parameters = {
+  backgrounds: { default: 'dark' },
+};
+
+export const DarkNeumorphic: Story = (args) => (
+  <article className={Card({ isDark: true, type: args.type })}>
+    <div className="card-header">
+      <h6 className="headline6">{args.title}</h6>
+      <span className="subtitle1">{args.secondary}</span>
+    </div>
+    <div className="card-body">
+      <p className="body2">{args.text}</p>
+    </div>
+  </article>
+);
+DarkNeumorphic.args = {
+  type: 'darkNeumorphic',
+  title: 'title',
+  secondary: 'secondary',
+  text: 'text',
+};
+DarkNeumorphic.parameters = {
   backgrounds: { default: 'dark' },
 };
 

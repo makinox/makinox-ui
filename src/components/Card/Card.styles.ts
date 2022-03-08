@@ -53,6 +53,14 @@ export default css({
         borderWidth: '1px',
         borderStyle: 'solid',
       },
+      neumorphic: {
+        borderRadius: '4px',
+        boxShadow: '6px 6px 12px #c5c5c5, -6px -6px 12px rgb(var(--light-background))',
+      },
+      darkNeumorphic: {
+        borderRadius: '4px',
+        boxShadow: '6px 6px 12px #1e1e1e, -6px -6px 12px rgb(var(--dark-background))',
+      },
     },
     isDark: {
       true: {
