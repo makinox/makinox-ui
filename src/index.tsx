@@ -1,8 +1,9 @@
 import { DropdownContainer, DropdownHiden, DropdownItem } from './components/Dropdown/Dropdown.styles';
 import FluidContainer from './components/FluidContainer/FluidContainer.styles';
+import Spinner from './components/Spinner/Spinner.styles';
+import { Badge } from './components/Info/Badge.styles';
 import TopBar from './components/TopBar/TopBar.styles';
 import Float from './components/Float/Float.styles';
-import Spinner from './components/Spinner/Spinner.styles';
 import Card from './components/Card/Card.styles';
 import { ButtonContained, ButtonOutline, ButtonText, ButtonNeumorphic } from './components/Button/Button.styles';
 
@@ -17,16 +18,17 @@ import './layout/wrap.css';
 import './layout/scale.css';
 
 export {
-  TopBar,
-  FluidContainer,
-  Float,
-  Spinner,
   DropdownContainer,
-  DropdownHiden,
-  DropdownItem,
-  Card,
-  ButtonContained,
-  ButtonOutline,
-  ButtonText,
   ButtonNeumorphic,
+  ButtonContained,
+  FluidContainer,
+  DropdownHiden,
+  ButtonOutline,
+  DropdownItem,
+  ButtonText,
+  Spinner,
+  TopBar,
+  Badge,
+  Float,
+  Card,
 };
