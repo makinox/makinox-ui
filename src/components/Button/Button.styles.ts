@@ -1,14 +1,38 @@
 import { css } from '@stitches/core';
 
+export const baseSizes = {
+  sm: {
+    // -30%
+    fontSize: '0.7000rem',
+    padding: '0 12px 0 12px',
+    height: '28px',
+  },
+  md: {
+    fontSize: '0.875rem',
+    padding: '0 16px 0 16px',
+    height: '36px',
+  },
+  lg: {
+    // +30%
+    fontSize: '1.1375rem',
+    padding: '0 20px 0 20px',
+    height: '46px',
+  },
+  xl: {
+    // +50%
+    fontSize: '1.3125rem',
+    padding: '0 24px 0 24px',
+    height: '54px',
+  },
+};
+
 const baseButton = {
   cursor: 'pointer',
-  fontSize: '0.875rem',
   lineHeight: '2.25rem',
   fontWeight: 500,
   letterSpacing: '0.0892857143em',
   textDecoration: 'none',
   textTransform: 'uppercase',
-  padding: '0 16px 0 16px',
   display: 'inline-flex',
   position: 'relative',
   alignItems: 'center',
@@ -21,7 +45,6 @@ const baseButton = {
   overflow: 'visible',
   verticalAlign: 'middle',
   borderRadius: '4px',
-  height: '36px',
   transition: 'all 0.3s ease 0s',
 
   '&:focus, &:active': {
@@ -36,6 +59,7 @@ export const ButtonContained = css({
   ...baseButton,
 
   variants: {
+    size: baseSizes,
     isDark: {
       true: {
         backgroundColor: 'rgb(var(--dark-secondary))',
@@ -54,7 +78,7 @@ export const ButtonContained = css({
     },
   },
 
-  defaultVariants: { isDark: false },
+  defaultVariants: { isDark: false, size: 'md' },
 });
 
 export const ButtonOutline = css({
@@ -63,6 +87,7 @@ export const ButtonOutline = css({
   backgroundColor: 'transparent',
 
   variants: {
+    size: baseSizes,
     isDark: {
       true: {
         border: '1px solid rgb(var(--dark-secondary))',
@@ -90,6 +115,7 @@ export const ButtonText = css({
   backgroundColor: 'transparent',
 
   variants: {
+    size: baseSizes,
     isDark: {
       true: {
         color: 'rgb(var(--dark-secondary))',
@@ -113,6 +139,7 @@ export const ButtonNeumorphic = css({
   ...baseButton,
 
   variants: {
+    size: baseSizes,
     isDark: {
       true: {
         color: 'rgb(var(--dark-secondary))',

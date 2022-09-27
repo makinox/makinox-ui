@@ -1,15 +1,24 @@
 import { GiCastle } from 'react-icons/gi';
 import { Story } from '@storybook/react/types-6-0';
+
 import { ButtonContained, ButtonOutline, ButtonText, ButtonNeumorphic } from '../..';
+import { baseSizes } from '../../components/Button/Button.styles';
 
 export default {
   title: 'Makinox-ui/Button',
   component: <button />,
+  argTypes: {
+    size: {
+      control: 'select',
+      options: Object.keys(baseSizes),
+    },
+  },
 };
 
 export const Contained: Story = (args) => <button className={ButtonContained(args)}>{args.text}</button>;
 Contained.args = {
   css: {},
+  size: 'md',
   isDark: false,
   text: 'contained',
 };
@@ -17,6 +26,7 @@ Contained.args = {
 export const Outlined: Story = (args) => <button className={ButtonOutline(args)}>{args.text}</button>;
 Outlined.args = {
   css: {},
+  size: 'md',
   isDark: false,
   text: 'Outlined',
 };
@@ -24,6 +34,7 @@ Outlined.args = {
 export const Text: Story = (args) => <button className={ButtonText(args)}>{args.text}</button>;
 Text.args = {
   css: {},
+  size: 'md',
   isDark: false,
   text: 'Text',
 };
@@ -31,6 +42,7 @@ Text.args = {
 export const Neumorphic: Story = (args) => <button className={ButtonNeumorphic(args)}>{args.text}</button>;
 Neumorphic.args = {
   css: {},
+  size: 'md',
   isDark: false,
   text: 'Neumorphic',
 };
@@ -42,6 +54,7 @@ export const ContainedIcon: Story = (args) => (
 );
 ContainedIcon.args = {
   css: {},
+  size: 'md',
   isDark: false,
 };
 
@@ -52,6 +65,7 @@ export const OutlinedIcon: Story = (args) => (
 );
 OutlinedIcon.args = {
   css: {},
+  size: 'md',
   isDark: false,
 };
 
@@ -62,6 +76,7 @@ export const TextIcon: Story = (args) => (
 );
 TextIcon.args = {
   css: {},
+  size: 'md',
   isDark: false,
 };
 
@@ -71,6 +86,7 @@ DarkContained.parameters = {
 };
 DarkContained.args = {
   css: {},
+  size: 'md',
   isDark: true,
   text: 'contained',
 };
@@ -81,6 +97,7 @@ DarkOutlined.parameters = {
 };
 DarkOutlined.args = {
   css: {},
+  size: 'md',
   isDark: true,
   text: 'Outlined',
 };
@@ -91,6 +108,7 @@ DarkText.parameters = {
 };
 DarkText.args = {
   css: {},
+  size: 'md',
   isDark: true,
   text: 'Text',
 };
@@ -101,6 +119,7 @@ DarkNeumorphic.parameters = {
 };
 DarkNeumorphic.args = {
   css: {},
+  size: 'md',
   isDark: true,
   text: 'Neumorphic',
 };
