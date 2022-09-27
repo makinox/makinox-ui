@@ -1,0 +1,53 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": ["@typescript-eslint", "prefer-arrow", "prettier", "jsx-a11y", "import", "jest"],
+  "rules": {
+    "curly": ["error", "multi"],
+    "max-params": ["error", 3],
+    "react/react-in-jsx-scope": "off",
+    "max-lines-per-function": ["error", { "max": 210 }],
+    "max-lines": ["error", 350],
+    "no-unused-vars": "off",
+    "complexity": ["error", 7],
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    "@typescript-eslint/array-type": ["error", { "default": "generic" }],
+    "prefer-arrow/prefer-arrow-functions": [
+      "error",
+      {
+        "disallowPrototype": true,
+        "singleReturnOnly": false,
+        "classPropertiesAllowed": false
+      }
+    ],
+    "prettier/prettier": ["error", { "endOfLine": "auto" }, { "usePrettierrc": true }]
+  },
+  "overrides": [
+    {
+      "files": ["*.tsx", "*.jsx"],
+      "rules": {
+        "max-lines-per-function": ["error", { "max": 310, "skipComments": true, "skipBlankLines": true }]
+      }
+    },
+    {
+      "files": ["**/*.stories.*"],
+      "rules": {
+        "import/no-anonymous-default-export": "off"
+      }
+    }
+  ]
+}

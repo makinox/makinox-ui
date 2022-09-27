@@ -1,6 +1,6 @@
 {
   "name": "@makinox/makinox-ui",
-  "version": "1.6.7",
+  "version": "1.6.8",
   "main": "./dist/index.js",
   "module": "./dist/index.es.js",
   "author": "Jesus Bossa <x@jesusbossa.dev> (https://jesusbossa.dev/)",
@@ -17,25 +17,10 @@
     "clean": "node ./src/cleaner",
     "build": "rollup -c && rollup -c rollup.config.css.js && npm run clean",
     "test": "react-scripts test",
+    "lint": "eslint ./src/**/**/*.{ts,tsx}",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook -- -o ./storybook-static"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ],
-    "overrides": [
-      {
-        "files": [
-          "**/*.stories.*"
-        ],
-        "rules": {
-          "import/no-anonymous-default-export": "off"
-        }
-      }
-    ]
   },
   "browserslist": {
     "production": [
@@ -59,6 +44,17 @@
     "@storybook/preset-create-react-app": "4.1.2",
     "@storybook/react": "6.5.12",
     "@types/react": "18.0.21",
+    "@typescript-eslint/eslint-plugin": "5.38.1",
+    "@typescript-eslint/parser": "5.38.1",
+    "eslint": "8.24.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-import": "2.26.0",
+    "eslint-plugin-jest": "27.0.4",
+    "eslint-plugin-jsx-a11y": "6.6.1",
+    "eslint-plugin-prefer-arrow": "1.2.3",
+    "eslint-plugin-prettier": "4.2.1",
+    "eslint-plugin-react": "7.31.8",
+    "eslint-plugin-react-hooks": "4.6.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "4.4.0",

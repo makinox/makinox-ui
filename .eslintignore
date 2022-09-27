@@ -1,0 +1,5 @@
+**/*.generated.tsx
+**/*factories.ts
+**/*schema.ts
+**/*apolloHelpers.ts
+src/cleaner.js
