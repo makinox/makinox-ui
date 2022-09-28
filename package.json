@@ -20,7 +20,8 @@
     "lint": "eslint ./src/**/**/*.{ts,tsx}",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook -- -o ./storybook-static"
+    "build-storybook": "build-storybook -- -o ./storybook-static",
+    "prepare": "husky install"
   },
   "browserslist": {
     "production": [
@@ -35,6 +36,8 @@
     ]
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
     "@rollup/plugin-commonjs": "22.0.2",
     "@rollup/plugin-node-resolve": "14.1.0",
     "@storybook/addon-actions": "6.5.12",
@@ -55,6 +58,7 @@
     "eslint-plugin-prettier": "4.2.1",
     "eslint-plugin-react": "7.31.8",
     "eslint-plugin-react-hooks": "4.6.0",
+    "husky": "^8.0.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "4.4.0",
