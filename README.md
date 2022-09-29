@@ -9,7 +9,14 @@ A little ui library.
 
 Link to [makinox-ui!](https://makinox-ui.jesusbossa.dev/)
 
-![Image of makinox-ui](./preview.png)
+## Usage
+
+Just install with
+```sh
+npm i @makinox/makinox-ui
+----
+yarn add @makinox/makinox-ui
+```
 
 ## Documentation
 
