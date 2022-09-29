@@ -11,6 +11,9 @@ Link to [makinox-ui!](https://makinox-ui.jesusbossa.dev/)
 
 ![Image of makinox-ui](./preview.png)
 
+## Contributing
+
+If you're interested in contributing to project, please read our [contributing docs](https://github.com/makinox/makinox-ui/blob/main/.github/CONTRIBUTING.md) **before submitting a pull request**.
 ## Available Scripts
 
 In the project directory, you can run:
